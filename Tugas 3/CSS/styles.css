@@ -1,0 +1,153 @@
+body {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden; 
+    overflow-y: auto;   
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: float 10s infinite ease-in-out;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #f57394;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.biodata-box, .box {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #f85a9c;
+    margin-top: 30px;
+}
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 133, 162, 0.8);
+    color: white;
+}
+
+.skills-experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.about-me {
+    font-size: 18px;
+    background: #ffdde1;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.social-links {
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 15px;                       
+    border-radius: 15px;               
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;                     
+    display: inline-block;                
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links:hover {
+    transform: scale(1.05); 
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 15px rgba(255, 79, 122, 0.8);
+}
+
+.social-links .instagram {
+    background: #ff4f7a;
+}
+
+.social-links .facebook {
+    background: #3b5998;
+}
+
+.social-links .instagram {
+    background: #ff4f7a;
+}
+
+.social-links .facebook {
+    background: #3b5998;
+}
+
+@media (max-width: 768px) {
+    .skills-experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: 100%;
+    }
+}
+.cv-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin-top: 50px; 
+    padding-bottom: 50px; 
+    max-height: 90vh;      
+    overflow-y: auto;      
+    overflow-x: hidden;   
+}

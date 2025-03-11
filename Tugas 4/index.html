@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .hexagon {
+            width: 120px; 
+            height: 140px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            object-fit: cover;
+        }
+
+        .hexagon.large {
+            width: 160px;
+            height: 180px;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .image-frame {
+            border: 5px solid #B0A695;
+            border-radius: 10px;
+            padding: 5px;
+            background: white;
+        }
+
+        .decorative-frame {
+            background: #F8E1E7;
+            border: 5px solid #8B6F5F;
+            border-radius: 50% 30% 50% 30%;
+            padding: 15px;
+            width: 300px; 
+            height: 200px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .decorative-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50% 30% 50% 30%;
+        }
+
+         img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+       .hover-column {
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            background-color: #6D4C41;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            will-change: transform;
+        }
+
+        .hover-column:hover {
+            animation: wiggle 0.3s ease-in-out;
+            transform: translateY(-10px) scale(1.05);
+            background-color: #8B6F5F;
+            outline: 2px solid rgba(255, 223, 0, 0.6);
+        }
+
+        @keyframes wiggle {
+            0% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-5px) rotate(-1deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            75% { transform: translateY(-5px) rotate(-1deg); }
+            100% { transform: translateY(-10px) rotate(0deg); }
+        }
+
+        img:hover {
+            box-shadow: 0 0 20px rgba(250, 162, 103, 0.9); /* Warna kuning emas */
+        }
+
+        .hover-column:hover {
+            box-shadow: 0 0 25px rgba(173, 216, 230, 0.9); /* Warna biru muda */
+        }
+
+
+    </style>
+</head>
+<body class="bg-[#E1DED0] text-gray-900 flex flex-col items-center justify-center min-h-screen">
+
+    <audio autoplay loop>
+        <source src="Musik/Barbie - Two Voices, One Song (Official Audio).mp3" type="audio/mp3">
+    </audio>
+    
+    <header class="bg-[#8B6F5F] text-white py-6 px-10 shadow-md w-full">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold italic">My Diary</h1>
+        <nav>
+            <ul class="flex gap-6">
+                <li><a href="#intro" class="hover:text-gray-300">Home</a></li>
+
+                <li class="relative group">
+                    <a href="#myfamily" class="hover:text-gray-300">My Family ▾</a>
+                    <ul class="absolute left-0 mt-2 min-w-max bg-[#8B6F5F] text-white shadow-lg rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        <li><a href="#family" class="block px-4 py-2 hover:bg-[#6D4C41]">My Family</a></li>
+                        <li><a href="#shehzad" class="block px-4 py-2 hover:bg-[#6D4C41]">Shehzad</a></li>
+                        <li><a href="#holiday" class="block px-4 py-2 hover:bg-[#6D4C41]">Holiday</a></li>
+                        <li><a href="#balikpapan" class="block px-4 py-2 hover:bg-[#6D4C41]">Family</a></li>
+                    </ul>
+                </li>
+               
+                <li class="relative group">
+                    <a href="#myfriends" class="hover:text-gray-300">Friends ▾</a>
+                    <ul class="absolute left-0 mt-2 min-w-max bg-[#8B6F5F] text-white shadow-lg rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        <li><a href="#friends" class="block px-4 py-2 hover:bg-[#6D4C41]">Friends</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <section id="intro" class="text-center mt-10">
+        <div class="container mx-auto px-8 py-12">
+            <div class="bg-[#EAE0D5] p-10 shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 rounded-lg">
+                <div class="w-full md:w-1/2 flex gap-1">
+                    <img src="Gambar/Aku/WhatsApp Image 2025-03-08 at 16.32.13_c8427b65.jpg" alt="Chair" class="rounded-lg w-1/2">
+                    <img src="Gambar/Aku/IMG-20231201-WA0001.jpg" alt="Arch Interior" class="rounded-lg w-1/2">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h1 class="text-5xl font-bold italic leading-tight">Hy, It's Me!</h1>
+                    <h2 class="text-5xl font-bold leading-tight">zulva~</h2>
+                    <div class="mt-2">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2LPz3zbAi1LDu8FDFztPBq?utm_source=generator" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <p class="mt-2 text-gray-600 text-base leading-relaxed font-medium">Halo, aku Zulva. Aku adalah gadis pecinta Barbie, apalagi Old Barbie. Karena menurutku Old Barbie mempunyai daya tarik sendiri dibandingkan dengan Barbie yang baru (even my friends said the same thing as me).</p>
+                    <p class="mt-3 text-gray-800 font-bold text-lg">And, those are my fav Barbie songs <3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="family" class="mt-16 px-10">
+        <div class="container mx-auto px-12 py-20">
+            <div class="bg-[#6D4C41] p-10 shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-lg text-white">
+                <div class="w-full md:w-1/3 flex flex-col gap-6">
+                    <img src="Gambar/Keluarga/1000223437.jpg" alt="Decor" class="rounded-lg">
+                    <p class="text-sm text-gray-300">Ini foto full anggota keluarga dan anggota baru keluarga ini.</p>
+                </div>
+                <div class="w-full md:w-1/3 text-center">
+                    <h1 class="text-6xl font-bold italic">This is</h1>
+                    <h2 class="text-6xl font-bold">MY FAMILY</h2>
+                    <p class="mt-6 text-gray-300 text-sm leading-relaxed">Ini waktu wedding mas tama dan mba kiky. Sebenarnya waktu antar minum itu kami pada ketawa, tapi entah kenapa fotografer nya gak ada yang dapat foto bagian kami ketawa.</p>
+                </div>
+                <div class="w-full md:w-1/3 flex flex-col gap-6">
+                    <img src="Gambar/Keluarga/1000223882.jpg" alt="Laptop Work" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="shehzad" class="mt-16 px-10">
+        <div class="container mx-auto px-8 py-12">
+            <div class="bg-[#EAE0D5] p-10 shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 rounded-lg">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="Gambar/Aku dan Shehzad/1000023655.jpg" alt="Interior Design" 
+                        class="rounded-full w-56 h-72 object-cover border-4 border-gray-300 shadow-md">
+                </div>
+                <div class="w-full md:w-1/2 text-left">
+                    <h1 class="text-4xl font-bold italic">Aku dan Bocil Kesayangan<3</h1>
+                    <p class="mt-2 text-gray-700 text-base leading-relaxed" style="text-align: justify;">
+                        His name is Muhammad Shehzad Alfarez, a little troublemaker from Sangasanga who's currently in preschool. Sometimes he stays over at my house, and honestly, he’s super mischievous and always causing chaos with me. But weirdly enough, when he’s not around, the house feels so empty, and everyone ends up missing him. He’s just too adorable, and no matter how much trouble he makes, I still love him so much! 💕✨
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="holiday" class="mt-16 px-10">
+        <div class="container mx-auto px-12 py-20">
+            <div class="bg-[#5D4B3C] p-10 shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-lg text-white">
+                <div class="w-full md:w-1/2 text-left">
+                    <h1 class="text-5xl font-bold italic">It was Holiday Time</h1>
+                    <p class="mt-6 text-gray-300 text-sm leading-relaxed">Nah, ini waktu akhir liburan semester kemarin. Aku di Balikpapan dan berada di Pantai Banua Patra. Pantainya bagus, apalagi ada hidden gem nya. Dan ini video di hidden gem nya. Ini masih yang dibawah, nah kalau sudah di atas gitu cuman di foto foto ini. Suka liat sunsetnya, dan bikin foto jadi aesthetic.</p>
+                    <div class="grid grid-cols-3 gap-2 mt-6">
+                        <img src="Gambar/Liburan/IMG-20250206-WA0005.jpg" alt="Sample 3" class="hexagon">
+                        <img src="Gambar/Aku/IMG-20250206-WA0047.jpg" alt="Sample 2" class="hexagon large">
+                        <img src="Gambar/Liburan/IMG-20250206-WA0044.jpg" alt="Sample 1" class="hexagon">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <video class="rounded-lg w-1/2 md:w-3/5 lg:-2/5 h-150" controls>
+                        <source src="Video/Liburan/VID-20250206-WA0007.mp4" type="video/mp4">
+                     </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="balikpapan" class="mt-16 px-10">
+        <div class="container mx-auto px-12 py-20">
+           <div class="bg-[#EAE0D5] p-10 shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-lg">
+               <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                   <img src="Gambar/Keluarga/IMG-20250206-WA0028.jpg" alt="Stairs" class="rounded-lg">
+                   <img src="Gambar/Keluarga/IMG-20250206-WA0065.jpg" alt="Door Decor" class="rounded-lg">
+                   <img src="Gambar/Keluarga/IMG-20250309-WA0005.jpg" alt="Vase" class="rounded-lg">
+                   <img src="Gambar/Keluarga/IMG-20250309-WA0023.jpg" alt="Living Room" class="rounded-lg">
+               </div>
+               <div class="w-full md:w-1/2 text-left">
+                   <h1 class="text-5xl font-bold italic">Family</h1>
+                   <p class="mt-6 text-gray-700 text-sm leading-relaxed">
+                       Ini keluarga Balikpapan, and I love them so much!! Yang foto malam itu kami lagi acara selamatan. Nah 3 lainnya foto waktu kami jalan ke Pantai Banua Patra, jadi aku jalan-jalannya sama mereka (tapi ke hidden gem nya cuman sama 1 orang, ya cowo di foto itu).
+                   </p>
+                   <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                       Dan, 2 orang di depan itu tante-tanteku. Yaps, tanteku yang nyetir. Ini lucu banget, kami terus foto karena menganggap hasil fotonya kurang bagus tapi aslinya bagus. Selesai foto kami kirim ke grup keluarga, pamer kami habis jalan-jalan wkwk.
+                   </p>
+               </div>
+           </div>
+    </section>
+
+        
+    <section id="myfriends" class="mt-16 px-10">
+        <div class="container mx-auto px-12 py-20">
+                <div class="bg-[#6D4C41] p-10 shadow-lg max-w-4xl mx-auto flex flex-col items-center gap-12 rounded-lg text-white">
+                    <h1 class="text-5xl font-bold italic">My Friends</h1>
+                    <p class="mt-6 text-gray-300 text-sm leading-relaxed text-center">
+                        I’d love to introduce you to my amazing friends, Reva, Wahna, dan Haliza. We’ve shared so many great moments together—laughing, supporting each other, and creating unforgettable memories. I’m so lucky to have them in my life! Hopefully, we’ll graduate together and celebrate our success side by side!🎓✨
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                        <div class="text-center">
+                            <img src="Gambar/Teman/IMG-20250304-WA0026.jpg" alt="Project 1" class="rounded-lg">
+                            <p class="text-sm mt-2">04 Maret 2025</p>
+                            <p class="text-sm mt-2">Hari dimana kami merayakan ulang tahun wahna.</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="Gambar/Teman/1000230180.jpg" alt="Project 2" class="rounded-lg">
+                            <p class="text-sm mt-2">04 Februari 2025</p>
+                            <p class="text-sm mt-2">Ini hari dimana kami saling kasih kado karena aslinya ulang tahun kami bulan Januari tetapi bulan Januari itu liburan akhir semester. </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="Gambar/Teman/1000068937.jpg" alt="Project 3" class="rounded-lg">
+                            <p class="text-sm mt-2">12 Agustus 2023</p>
+                            <p class="text-sm mt-2">Kami pergi ke gramedia setelah pembagian kelompok Harddisk 2023.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section id="friends" class="mt-16 px-10">
+        <div class="container mx-auto px-8 py-20">
+           <div class="bg-white p-10 shadow-xl max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-2xl">
+               <div class="w-full md:w-1/3">
+                   <img src="Gambar/Teman/1000189052.jpg" alt="Event Memory" class="image-frame w-full h-auto rounded-lg">
+               </div>
+               <div class="w-full md:w-1/3 text-center">
+                   <h1 class="text-6xl font-bold italic leading-tight">My Friends</h1>
+                   <p class="mt-6 text-gray-700 text-sm leading-relaxed">These moments with my friends are truly special. They’ve always been there to celebrate with me, and for the first time, I experienced the joy of receiving a gift from friends. That feeling—ugh, it’s just something else! And the fact that it happened with them makes it even more meaningful.</p>
+               </div>
+               <div class="w-full md:w-1/3 flex flex-col gap-6 items-center">
+                   <div class="decorative-frame">
+                       <img src="Gambar/Teman/1000128672.jpg" alt="Diary Moment">
+                   </div>
+                   <div class="decorative-frame">
+                       <img src="Gambar/Teman/1000194837.jpg" alt="Writing in Journal">
+                   </div>
+               </div>
+           </div>
+       </div>
+    </section>
+
+
+   <section class="flex justify-center items-center mt-20 mb-20">
+    <div class="max-w-7xl bg-[#6B4F3F] text-white p-16 rounded-lg flex items-center gap-16 shadow-lg mx-auto">
+        <div>
+            <h2 class="text-4xl font-bold">Last But Not Least</h2>
+            <p class="mt-3 text-lg">Yuk, temenan di sini biar gak ketinggalan update! 🚀</p>
+            <div class="flex gap-4 mt-5">
+                <a href="https://www.instagram.com/zuluva16_?igsh=enoxbDRhb2x2emRq" target="_blank" class="group">
+                    <div class="bg-gradient-to-r from-pink-400 to-yellow-400 p-3 rounded-full shadow-md transition-transform transform group-hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7.5 2C4.42 2 2 4.42 2 7.5v9C2 19.58 4.42 22 7.5 22h9c3.08 0 5.5-2.42 5.5-5.5v-9C22 4.42 19.58 2 16.5 2h-9zm0 2h9c1.93 0 3.5 1.57 3.5 3.5v9c0 1.93-1.57 3.5-3.5 3.5h-9C5.57 20 4 18.43 4 16.5v-9C4 5.57 5.57 4 7.5 4zm6.75 2.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm-4.25 2c-2.34 0-4.25 1.91-4.25 4.25S7.66 17 10 17s4.25-1.91 4.25-4.25S12.34 8.5 10 8.5zm0 2c1.26 0 2.25.99 2.25 2.25S11.26 15 10 15s-2.25-.99-2.25-2.25S8.74 10.5 10 10.5z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/share/15t8ZSuKdB/" target="_blank" class="group">
+                    <div class="bg-blue-500 p-3 rounded-full shadow-md transition-transform transform group-hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12.07C22 6.5 17.5 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.19 8.44 9.93v-7.03H7.9v-2.9h2.54V9.7c0-2.5 1.5-3.88 3.77-3.88 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.65.78-1.65 1.58v1.92h2.8l-.45 2.9h-2.35v7.03c4.78-.74 8.44-4.91 8.44-9.93z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="https://wa.me/qr/VAS3OEURNR72B1" target="_blank" class="group">
+                    <div class="bg-green-500 p-3 rounded-full shadow-md transition-transform transform group-hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 2.26.7 4.36 1.91 6.09L2 22l4.09-1.91A9.953 9.953 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.85 0-3.58-.63-4.98-1.68l-.36-.26-2.42 1.13.52-2.57-.24-.39A7.96 7.96 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="relative w-64 h-80 overflow-hidden bg-white rounded-t-[50%] rounded-b-lg shadow-2xl border-4 border-[#BDB395]">
+            <img src="Gambar/Aku/1000223692.jpg" alt="Foto" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
+
+<section id="guestbook" class="mt-16 px-10">
+    <div class="container mx-auto px-12 py-20">
+        <div class="bg-[#EAE0D5] p-10 shadow-lg max-w-4xl mx-auto flex flex-col items-center gap-8 rounded-lg">
+            <h1 class="text-5xl font-bold italic">Guestbook</h1>
+            <p class="text-gray-700 text-sm text-center">Tinggalkan pesan atau kesanmu di sini! 💖</p>
+            <form class="w-full max-w-md">
+                <textarea class="w-full p-4 border rounded-lg" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+                <button type="submit" class="mt-4 bg-[#6D4C41] text-white py-2 px-6 rounded-lg hover:bg-[#8B6F5F]">Kirim</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="bg-[#8B6F5F] text-white py-6 mt-15 text-center w-full">
+        <p class="text-sm">&copy; 2025 My Diary | Made with 💖 by Zulva</p>
+    </footer>  
+
+</body>
+</html>
